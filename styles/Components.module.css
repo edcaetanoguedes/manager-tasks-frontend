@@ -1,0 +1,23 @@
+.cardtask {
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px 0px #555;
+}
+
+.cardtask .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+}
+
+.cardtask .footer {
+    padding-top: 10px;
+}
+
+.cardtask .close {
+  color: #fff;
+  border-radius: 3px;
+  background-color: #f00;
+}

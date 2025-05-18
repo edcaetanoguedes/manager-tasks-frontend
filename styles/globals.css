@@ -1,6 +1,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --width-standard97: 97%;
+  --width-standard95: 95%;
+  --width-standard93: 93%;
+  --max-width-standard-web: 900px;
+  --margin-auto-center: 0 auto;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,6 +29,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body, body * {
+  padding: 0;
+  margin: 0;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -35,8 +45,10 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+button {
+  border: none;
+}
+
+button, input {
+  padding: 3px 8px;
 }

@@ -1,0 +1,39 @@
+.layout > .content {
+  max-width: var(--max-width-standard-web);
+  padding: 10px 10px;
+  margin: var(--margin-auto-center);
+}
+
+.header {
+  padding-bottom: 5px;
+  border-bottom: 2px solid #222;
+  margin-bottom: 15px;
+}
+
+.headline {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5px 0;
+}
+
+.main {
+  padding: 5px;
+}
+
+.footer {
+  padding-top: 15px;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+  grid-auto-rows: auto;
+}
+
+@media (prefers-color-schema: dark) {
+  .header {
+    border-bottom: 2px solid #555;
+  }
+}
