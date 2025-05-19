@@ -37,13 +37,7 @@ Fase 4:
 
 ## Instalação
 
-### Frontend
-- ### Clone do repositório 
-  - Execute `git clone https://github.com/edcaetanoguedes/manager-tasks-frontend.git`.
-  - Acesse a pasta do repositório `cd manager-tasks-frontend`.
-- ### Rodando o projeto
-  - Execute `npm run dev`.
-    - Por padrão o backend. Rodará em [http://localhost:3000](http://localhost:3000).
+**AVISO**: Execute o Backend e só depois o Frontend.
 
 ### Backend
 - ### Clone do repositório
@@ -52,6 +46,14 @@ Fase 4:
 - ### Rodando o projeto
   - Execute `npm run dev`.
     - Por padrão o backend. Rodará em [http://localhost:4000](http://localhost:4000).
+
+### Frontend
+- ### Clone do repositório 
+  - Execute `git clone https://github.com/edcaetanoguedes/manager-tasks-frontend.git`.
+  - Acesse a pasta do repositório `cd manager-tasks-frontend`.
+- ### Rodando o projeto
+  - Execute `npm run dev`.
+    - Por padrão o backend. Rodará em [http://localhost:3000](http://localhost:3000).
 
 ## Agradecimentos
 
