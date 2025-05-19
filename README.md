@@ -1,61 +1,65 @@
-# 📝 Gerenciador de tarefas (Next.js)
+# 📝 Frontend: Gerenciador de tarefas (Next.js)
 
-Este é o frontend da aplicação de tarefas (To-Do List), desenvolvido com **Next.js**. Ele consome uma API Express e permite ao usuário criar e deletar tarefas.
+Este é o frontend da aplicação de tarefas (To-Do List), desenvolvido em*Next.js**.
 
----
+### Objetivo
 
-## ⚙️ Tecnologias
+Este projeto faz parte de um combo para estudo de Testes Automatizados (Frontend, Backend e [Testes Automatizados]()).
 
-- [Next.js](https://nextjs.org/)
-- [React](https://reactjs.org/)
+### Antes de começar
 
----
+É necessário clonar o Backend para executar em conjunto. Instruções logo abaixo.
 
-## 📦 Instalação
+## Funcionalidades principais:
 
-```bash
-cd frontend
-npm install
-````
+- ✅ Listar tarefas existentes
+- ➕ Criar novas tarefas
+- ❌ Deletar tarefas individualmente
 
----
+## Estágios do projeto
 
-## 🚀 Executando o projeto
+Fase 1:
+- [x] Requisitos.
+- [x] Recursos/Skills.
+- [x] Bibliotecas/dependências.
+- [x] [Estrutura do projeto](./docs/structure/project.md).
+- [x] Rotas da aplicação.
+- [x] Redação inicial do README.
 
-Certifique-se de que o backend esteja rodando em `http://localhost:4000`.
+Fase 2:
+- [x] Implementação.
 
-Depois, execute o frontend:
+Fase 3:
+- [ ] Testes E2E: [repositório de testes]().
 
-```bash
-npm run dev
-```
+Fase 4:
+- [ ] Relatório: Análise/Revisão do projeto.
 
-Acesse o app em: [http://localhost:3000](http://localhost:3000)
----
+## Instalação
 
-## ✨ Funcionalidades
+### Frontend
+- ### Clone do repositório 
+  - Execute `git clone https://github.com/edcaetanoguedes/manager-tasks-frontend.git`.
+  - Acesse a pasta do repositório `cd manager-tasks-frontend`.
+- ### Rodando o projeto
+  - Execute `npm run dev`.
+    - Por padrão o backend. Rodará em [http://localhost:3000](http://localhost:3000).
 
-* ✅ Listar tarefas existentes
-* ➕ Criar novas tarefas
-* ❌ Deletar tarefas individualmente
+### Backend
+- ### Clone do repositório
+  - Execute `git clone https://github.com/edcaetanoguedes/manager-tasks-backend.git`.
+  - Acesse a pasta do repositório `cd manager-tasks-backend`.
+- ### Rodando o projeto
+  - Execute `npm run dev`.
+    - Por padrão o backend. Rodará em [http://localhost:4000](http://localhost:4000).
 
----
+## Agradecimentos
 
-## 🔁 Fluxo de dados
+- Gostou do projeto? Achou legal? Peça a gentileza de dar uma estrela no projeto, um comentário. Assim poderei ter métricas de relevância do projeto.
 
-1. A página inicial (`pages/index.js`) busca tarefas do backend via API REST.
-2. Cada tarefa é renderizada usando o componente `TaskItem`.
-3. Ao clicar em "Deletar", o frontend faz uma requisição para a API e atualiza a lista.
+- Qualquer pessoa interessada no projeto, faça bom uso. Seja para estudo, prática ou curiosidade mesmo.
 
----
+- Tem um projeto legal em mente e precisa de ajuda? Chama! Quem sabe não trabalhamos juntos.
 
-## 🧪 Testes de Regressão
-
-Este frontend é testado com **Cypress**, garantindo que a criação e exclusão de tarefas continue funcionando corretamente após alterações no código.
-
----
-
-## 📄 Licença
-
-Projeto de exemplo para estudo de testes de regressão com frontend + backend.
+## Bom proveito!
 
