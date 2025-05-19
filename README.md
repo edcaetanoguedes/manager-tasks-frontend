@@ -4,7 +4,7 @@ Este é o frontend da aplicação de tarefas (To-Do List), desenvolvido em*Next.
 
 ### Objetivo
 
-Este projeto faz parte de um combo para estudo de Testes Automatizados (Frontend, Backend e Testes Automatizados).
+Este projeto faz parte de um combo para estudo e aprimoramento (Frontend, Backend e Testes Automatizados).
 
 ### Antes de começar
 
