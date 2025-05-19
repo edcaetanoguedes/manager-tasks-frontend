@@ -4,7 +4,7 @@ Este é o frontend da aplicação de tarefas (To-Do List), desenvolvido em*Next.
 
 ### Objetivo
 
-Este projeto faz parte de um combo para estudo de Testes Automatizados (Frontend, Backend e [Testes Automatizados]()).
+Este projeto faz parte de um combo para estudo de Testes Automatizados (Frontend, Backend e Testes Automatizados).
 
 ### Antes de começar
 
@@ -30,7 +30,7 @@ Fase 2:
 - [x] Implementação.
 
 Fase 3:
-- [ ] Testes E2E: [repositório de testes]().
+- [ ] Testes E2E: [repositório de testes](https://github.com/edcaetanoguedes/manager-tasks-automated tests).
 
 Fase 4:
 - [ ] Relatório: Análise/Revisão do projeto.
