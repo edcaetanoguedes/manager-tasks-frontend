@@ -30,7 +30,7 @@ Fase 2:
 - [x] Implementação.
 
 Fase 3:
-- [ ] Testes E2E: [repositório de testes](https://github.com/edcaetanoguedes/manager-tasks-automated tests).
+- [ ] Testes E2E: [repositório de testes](https://github.com/edcaetanoguedes/manager-tasks-automated-tests).
 
 Fase 4:
 - [ ] Relatório: Análise/Revisão do projeto.
