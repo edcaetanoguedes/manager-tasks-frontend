@@ -27,7 +27,7 @@ Fase 1:
 - [x] Redação inicial do README.
 
 Fase 2:
-- [x] Implementação.
+- [x] Implementação do Frontend.
 
 Fase 3:
 - [ ] Testes E2E: [repositório de testes](https://github.com/edcaetanoguedes/manager-tasks-automated-tests).
@@ -56,6 +56,21 @@ Fase 4:
 - ### Rodando o projeto
   - Execute `npm run dev`.
     - Por padrão o backend. Rodará em [http://localhost:3000](http://localhost:3000).
+
+## Stacks
+
+- **Frontend**: NextJs.
+- **Padronização de código/commit**: husky, lint-stage, commitizen, commitlint.
+
+## Commits
+
+- `feat`: nova funcionalidade.
+- `fix`: correção de bug.
+- `chore`: tarefas gerais que não afetam o código em produção (install, configs, linter).
+- `docs`: mudanças na documentação.
+- `style`: formatação, ponto e vírgula, espaços em branco, etc.
+- `refactor`: refatoração de código (sem nova funcionalidade ou bug fix).
+- `test`: adição ou ajuste de testes.
 
 ## Agradecimentos
 
