@@ -32,7 +32,7 @@ export function CardTask({ data, onDelete }) {
         <p>{data.text}</p>
       </div>
       <div className={styles.footer}>
-        <p>{data?.data?.creation || "DD/mmmm/YYYY"}</p>
+        <p>{data?.creation}</p>
       </div>
     </div>
   );
