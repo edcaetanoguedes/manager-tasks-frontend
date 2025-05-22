@@ -1,5 +1,8 @@
 # 📝 Frontend: Gerenciador de tarefas (Next.js)
 
+<img src=" https://img.shields.io/badge/Status-EM_CONSTRUÇÃO-00FF00" width="150" height="25" />
+<img src="https://visitor-badge.laobi.icu/badge?page_id=manager-tasks-frontend&" />
+
 Este é o frontend da aplicação de tarefas (To-Do List), desenvolvido em*Next.js**.
 
 ### Objetivo
