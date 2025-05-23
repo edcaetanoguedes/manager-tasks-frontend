@@ -64,6 +64,7 @@ Fase 4:
 
 - **Frontend**: NextJs.
 - **Padronização de código/commit**: husky, lint-stage, commitizen, commitlint.
+- **Teste**: Mocha, chai.
 
 ## Commits
 
