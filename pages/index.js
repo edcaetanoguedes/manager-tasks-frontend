@@ -30,9 +30,13 @@ export default function Home() {
     loadTasks();
   };
 
-  const onDelete = async (id) => {
+  const onDelete = async () => {
     await loadTasks()
   };
+
+  const onStatusChange = async () => {
+    await loadTasks()
+  }
 
   useEffect(() => {
     loadTasks();
@@ -61,7 +65,7 @@ export default function Home() {
       <Main>
         <Grid>
           {tasks.map((task) => (
-            <CardTask key={task.id} data={task} onDelete={onDelete} />
+            <CardTask key={task.id} data={task} onStatusChange={onStatusChange} onDelete={onDelete} />
           ))}
         </Grid>
       </Main>

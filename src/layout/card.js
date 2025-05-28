@@ -1,24 +1,71 @@
 import styles from "@/styles/Components.module.css";
 import { sqlite_convertTimestampToUTC, sqlite_convertTimestampToUTCLocale, sqlite_convertUTCtoUTCLocale2 } from "../scripts/database/sqlite";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 require("dotenv").config();
 
 const ENDPOINT = `http://localhost:4000/api/v1/tasks`;
 
-export function CardTask({ data, onDelete }) {
+export function CardTask({ data, onStatusChange, onDelete }) {
+  const [status, setStatus] = useState(data.status)
+  
+  const handleFinish = async () => {
+    const res = await fetch(`${ENDPOINT}/${data.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        status: "concluído"
+      })
+    })
+
+    if(res.status == 200) {
+      onStatusChange()
+      setStatus("concluído")
+    }
+
+    if (res.status == 400 || res.status == 500) {
+      alert(res.message);
+    }
+  }
+
+  const handleUnfinish = async () => {
+    const res = await fetch(`${ENDPOINT}/${data.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        status: "pendente"
+      })
+    })
+
+    if(res.status == 200) {
+      onStatusChange()
+      setStatus("pendente")
+    }
+
+    if (res.status == 400 || res.status == 500) {
+      alert(res.message);
+    }
+  }
+  
   const handleDelete = async () => {
     const res = await fetch(`${ENDPOINT}/${data.id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
       },
-    }).then((response) => response.json());
+    })
 
-    if (res.message) {
+    if (res.status == 200) {
       onDelete();
     }
 
-    if (res.error) {
-      alert(res.error);
+    if (res.status == 400 || res.status == 500) {
+      alert(res.message);
     }
   };
 
@@ -27,8 +74,20 @@ export function CardTask({ data, onDelete }) {
   return (
     <div className={styles.cardtask}>
       <div className={styles.header}>
+        {status && status == "pendente" ? (
+          <button className={styles.finish} onClick={handleFinish}>
+          <FontAwesomeIcon icon={faCheck} width={26} height={26} />
+        </button>
+        ) : null}
+
+        {status && status == "concluído" ? (
+          <button className={styles.unfinish} onClick={handleUnfinish}>
+          <FontAwesomeIcon icon={faCheck} width={26} height={26} />
+        </button>
+        ) : null}
+
         <button className={styles.close} onClick={handleDelete}>
-          x
+          <FontAwesomeIcon icon={faXmark} width={26} height={26} />
         </button>
       </div>
       <div className={styles.main}>
