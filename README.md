@@ -30,7 +30,7 @@ Fase 1:
 - [x] Redação inicial do README.
 
 Fase 2:
-- [x] Implementação do Frontend.
+- [] Implementação do Frontend **EM CONSTRUÇÃO**.
 
 Fase 3:
 - [ ] Testes E2E: [repositório de testes](https://github.com/edcaetanoguedes/manager-tasks-automated-tests).
