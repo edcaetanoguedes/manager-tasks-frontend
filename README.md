@@ -17,6 +17,8 @@ Este projeto faz parte de um combo para estudo e aprimoramento (Frontend, Backen
 
 - ✅ Listar tarefas existentes
 - ➕ Criar novas tarefas
+- ✅ Alterar status da tarefa
+- 📝 Alterar informações da tarefa
 - ❌ Deletar tarefas individualmente
 
 ## Estágios do projeto
