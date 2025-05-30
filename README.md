@@ -68,15 +68,32 @@ Fase 4:
 - **Padronização de código/commit**: husky, lint-stage, commitizen, commitlint.
 - **Teste**: Mocha, chai.
 
+## Branchs
+
+| Nome da branch | Finalidade                                                                  |
+| -------------- | --------------------------------------------------------------------------- |
+| `main`         | Branch principal (padrão moderno)                                           |
+| `master`       | Antigo nome padrão para a branch principal                                  |
+| `develop`      | Usada como branch principal de desenvolvimento (Git Flow)                   |
+| `release`      | Branch usada para preparar uma versão de produção                           |
+| `hotfix`       | Correções rápidas diretamente na produção                                   |
+| `feature/xyz`  | Nova funcionalidade (branch temporária baseada em `develop` ou `main`)      |
+| `bugfix/xyz`   | Correção de bugs em desenvolvimento                                         |
+| `test`         | Branch usada para testes temporários                                        |
+| `staging`      | Pré-produção (ambiente intermediário entre dev e produção)                  |
+
+
 ## Commits
 
-- `feat`: nova funcionalidade.
-- `fix`: correção de bug.
-- `chore`: tarefas gerais que não afetam o código em produção (install, configs, linter).
-- `docs`: mudanças na documentação.
-- `style`: formatação, ponto e vírgula, espaços em branco, etc.
-- `refactor`: refatoração de código (sem nova funcionalidade ou bug fix).
-- `test`: adição ou ajuste de testes.
+| Nome do commit | Finalidade                                                                    |
+| -------------- | ----------------------------------------------------------------------------- |
+| `feat`         | nova funcionalidade                                                           |
+| `fix`          | correção de bug                                                               |
+| `chore`        | tarefas gerais que não afetam o código em produção (install, configs, linter) |
+| `docs`         | mudanças na documentação                                                      |
+| `style`        | formatação, ponto e vírgula, espaços em branco, etc.                          |
+| `refactor`     | refatoração de código (sem nova funcionalidade ou bug fix)                    |
+| `test`         | adição ou ajuste de testes                                                    |
 
 ## Agradecimentos
 
