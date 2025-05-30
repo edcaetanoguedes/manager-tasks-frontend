@@ -8,7 +8,9 @@ require("dotenv").config();
 const ENDPOINT = `http://localhost:4000/api/v1/tasks`;
 
 export function CardTask({ data, onStatusChange, onDelete }) {
+  const [initialText, setInitialText] = useState(data.text)
   const [status, setStatus] = useState(data.status)
+  const [text, setText] = useState(data.text)
   
   const handleFinish = async () => {
     const res = await fetch(`${ENDPOINT}/${data.id}`, {
@@ -69,6 +71,42 @@ export function CardTask({ data, onStatusChange, onDelete }) {
     }
   };
 
+  const handleTextAreaChange = (e) => {
+    setText(e.target.value)
+
+    console.log("Alterou de: ", text)
+    console.log("Para: ", e.target.value)
+  }
+
+  // Atualização de texto da tarefa
+  const updateText = async () => {
+    const res = await fetch(`${ENDPOINT}/${data.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        text
+      })
+    })
+
+    return res
+  }
+
+  // Controla o fluxo de atualização
+  const update = async () => {
+    if(initialText !== text) {
+      const res = await updateText()
+      .then((response) => {
+        if(response.status == 200) {
+          setInitialText(text);
+        }
+        return response.json()
+      })
+      .then(body => alert(body.message))
+    }
+  }
+
   const _data_creation = sqlite_convertTimestampToUTCLocale(data.creation)
 
   return (
@@ -91,10 +129,11 @@ export function CardTask({ data, onStatusChange, onDelete }) {
         </button>
       </div>
       <div className={styles.main}>
-        <p>{data.text}</p>
+        <textarea value={text} onChange={handleTextAreaChange}/>
       </div>
       <div className={styles.footer}>
         <p>{_data_creation}</p>
+        <button onClick={update}>Salvar</button>
       </div>
     </div>
   );
