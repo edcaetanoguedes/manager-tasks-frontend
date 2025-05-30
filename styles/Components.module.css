@@ -6,33 +6,56 @@
 }
 
 .cardtask .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-bottom: 10px;
 }
 
 .cardtask .footer {
-    padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
 }
 
 .cardtask .finish {
   color: #fff;
   border-radius: 3px;
   background-color: #595;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .cardtask .unfinish {
   color: #bbb;
   border-radius: 3px;
   background-color: #fff;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .cardtask .close {
   color: #fff;
   border-radius: 3px;
   background-color: #f00;
-  cursor:pointer;
+  cursor: pointer;
+}
+
+.cardtask .text {
+  width: 100%;
+  min-height: 100px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  background-color: #0000;
+  resize: none;
+}
+
+.cardtask .updateCard {
+  border-radius: 5px;
+  background-color: #595;
+}
+
+.cardtask .updateCard {
+  border-radius: 5px;
+  background-color: #595;
 }
