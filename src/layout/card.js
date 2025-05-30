@@ -11,6 +11,7 @@ export function CardTask({ data, onStatusChange, onDelete }) {
   const [initialText, setInitialText] = useState(data.text)
   const [status, setStatus] = useState(data.status)
   const [text, setText] = useState(data.text)
+  const [editText, setEditText] = useState(false);
   
   const handleFinish = async () => {
     const res = await fetch(`${ENDPOINT}/${data.id}`, {
@@ -72,6 +73,7 @@ export function CardTask({ data, onStatusChange, onDelete }) {
   };
 
   const handleTextAreaChange = (e) => {
+    setEditText(true)
     setText(e.target.value)
 
     console.log("Alterou de: ", text)
@@ -100,6 +102,7 @@ export function CardTask({ data, onStatusChange, onDelete }) {
       .then((response) => {
         if(response.status == 200) {
           setInitialText(text);
+          setEditText(false)
         }
         return response.json()
       })
@@ -129,11 +132,11 @@ export function CardTask({ data, onStatusChange, onDelete }) {
         </button>
       </div>
       <div className={styles.main}>
-        <textarea value={text} onChange={handleTextAreaChange}/>
+        <textarea className={styles.text} value={text}  onChange={handleTextAreaChange}/>
       </div>
       <div className={styles.footer}>
         <p>{_data_creation}</p>
-        <button onClick={update}>Salvar</button>
+        {editText ? <button className={styles.updateCard} onClick={update}>Salvar</button> : null}
       </div>
     </div>
   );
