@@ -1,20 +1,43 @@
 :root {
   --color: #000;
+  --color-inside: #444;
+  
+  --input-background: #fff;
+  
+  --button-submit-task-color: #fff;
+  --button-submit-task-background: #393;
+  --button-submit-task-background-hover: #3c3;
+
+  --card-text-border-color: #9f9;
+  --card-background: #9f9;
+  
   --background: #ffffff;
   --foreground: #171717;
+
   --width-standard97: 97%;
   --width-standard95: 95%;
   --width-standard93: 93%;
   --max-width-standard-web: 900px;
+
   --margin-auto-center: 0 auto;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --color: #fff;
+    --color-inside: #fff;
+    
+    --card-text-border-color: #555;
+
+    --input-background: #222;
+    --card-background: #222;
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+
+  input, button {
+  border: 1px solid var(--card-text-border-color);
+}
 }
 
 html,
@@ -43,20 +66,45 @@ body, body * {
   margin: 0;
 }
 
-textarea, input {
+textarea,
+input {
+  color: var(--color-inside);
+  font-size: 14px;
   padding: 3px 5px;
+  border-width: 1px;
+  outline: none;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+textarea,
+input,
+button {
+  background-color: var(--input-background);
+}
+
+button,
+input {
+  padding: 5px 10px;
+  margin-right: 3px;
 }
 
 button {
   color: var(--color);
-  border: none;
+  border-width: 1px;
+  cursor: pointer;
 }
 
-button, input {
-  padding: 3px 8px;
+a {
+  color: var(--color);
+  text-decoration: none;
+}
+
+/* Botão de cadastro da tarefa */
+button#add-task {
+  color: var(--button-submit-task-color);
+  background-color: var(--button-submit-task-background);
+}
+
+button#add-task:hover {
+  border-color: var(--button-submit-task-background);
+  background-color: var(--button-submit-task-background-hover);
 }

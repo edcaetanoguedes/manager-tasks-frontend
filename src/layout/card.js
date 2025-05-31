@@ -135,7 +135,7 @@ export function CardTask({ data, onStatusChange, onDelete }) {
         <textarea className={styles.text} value={text}  onChange={handleTextAreaChange}/>
       </div>
       <div className={styles.footer}>
-        <p>{_data_creation}</p>
+        <label className={styles.date_creation}>{_data_creation}</label>
         {editText ? <button className={styles.updateCard} onClick={update}>Salvar</button> : null}
       </div>
     </div>

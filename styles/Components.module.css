@@ -2,6 +2,7 @@
   font-size: 14px;
   padding: 10px;
   border-radius: 8px;
+  background-color: var(--card-background);
   box-shadow: 0px 0px 5px 0px #555;
 }
 
@@ -20,42 +21,79 @@
   padding-top: 10px;
 }
 
+/* Componente: mudança de status */
 .cardtask .finish {
-  color: #fff;
   border-radius: 3px;
-  background-color: #595;
-  cursor: pointer;
+  background-color: #5b5;
 }
 
+/* Componente: mudança de status */
 .cardtask .unfinish {
-  color: #bbb;
   border-radius: 3px;
   background-color: #fff;
-  cursor: pointer;
+}
+
+.cardtask .finish svg,
+.cardtask .unfinish svg {
+  color: #fff;
 }
 
 .cardtask .close {
-  color: #fff;
   border-radius: 3px;
   background-color: #f00;
-  cursor: pointer;
+}
+
+.cardtask .close,
+.cardtask .finish,
+.cardtask .unfinish {
+  padding: 0;
+  border: none;
+  opacity: 0.7;
+}
+
+.cardtask .close:hover,
+.cardtask .finish:hover,
+.cardtask .unfinish:hover {
+  opacity: 1;
+}
+
+.cardtask .close svg,
+.cardtask .finish svg,
+.cardtask .unfinish svg {
+  width: 14px;
+  height: 14px;
+  padding: 1px;
+}
+
+.cardtask .close svg:hover,
+.cardtask .finish svg:hover,
+.cardtask .unfinish svg:hover {
+  color: #fff;
 }
 
 .cardtask .text {
   width: 100%;
   min-height: 100px;
   padding: 5px 8px;
+  border-width: 1px;
   border-radius: 5px;
-  background-color: #0000;
+  border-color: var(--card-text-border-color);
+  background-color: #fff0;
   resize: none;
 }
 
-.cardtask .updateCard {
-  border-radius: 5px;
-  background-color: #595;
+.cardtask .date_creation {
+  font-size: 12px;
+  color: var(--color-inside);
 }
 
 .cardtask .updateCard {
+  color: #fff;
+  border: none;
   border-radius: 5px;
-  background-color: #595;
+  background-color: #5a5;
+}
+
+.cardtask .updateCard:hover {
+  background-color: #7b7;
 }
