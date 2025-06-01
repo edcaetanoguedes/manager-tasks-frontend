@@ -20,7 +20,10 @@ export default function Home() {
   };
 
   const addTask = async () => {
-    if (!text) return;
+    if (!text || text.length < 5) {
+      alert("O texto da tarefa necessita pelo menos 5 caracteres!")
+      return;
+    }
     await fetch(ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
