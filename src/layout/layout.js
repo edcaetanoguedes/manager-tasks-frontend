@@ -44,7 +44,7 @@ export function Footer({ children }) {
 
 export function Grid({ children }) {
     return (
-        <div className={styles.grid}>
+        <div id="task-list" className={styles.grid}>
             {children}
         </div>
     )

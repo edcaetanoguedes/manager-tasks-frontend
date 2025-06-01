@@ -113,7 +113,7 @@ export function CardTask({ data, onStatusChange, onDelete }) {
   const _data_creation = sqlite_convertTimestampToUTCLocale(data.creation)
 
   return (
-    <div className={styles.cardtask}>
+    <div data-id={data.id} className={styles.cardtask}>
       <div className={styles.header}>
         {status && status == "pendente" ? (
           <button className={styles.finish} onClick={handleFinish}>
